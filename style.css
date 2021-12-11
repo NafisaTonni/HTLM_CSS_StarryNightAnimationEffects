@@ -1,0 +1,139 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.scene
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#111425 , #3751e0); 
+  background-attachment: fixed;
+  overflow: hidden; 
+}
+.moon
+{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.moon:after
+{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#111425 , #3751e0); 
+    background-attachment: fixed;;
+}
+.forest
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transform: scale(1.2);
+}
+.scene i
+{
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%,90%
+    {
+        opacity: 1;  
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+.cloud1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 600px;
+    z-index: 10000;
+    animation: animateCloud 50s linear infinite;
+}
+.cloud2
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 500px;
+    z-index: 10000;
+    animation: animateCloud 35s linear infinite;
+}
+.cloud3
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 600px;
+    z-index: 10000;
+    animation: animateCloud 80s linear infinite;
+}
+.cloud4
+{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    max-width: 300px;
+    z-index: 10000;
+    animation: animateCloud 70s linear infinite;
+    animation-delay: -20s;
+}
+.cloud5
+{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    max-width: 500px;
+    z-index: 10000;
+    animation: animateCloud 40s linear infinite;
+    animation-delay: -5s;
+}
+.cloud6
+{
+    position: absolute;
+    top: 75px;
+    left: 0;
+    max-width: 400px;
+    z-index: 10000;
+    animation: animateCloud 30s linear infinite;
+    animation-delay: -10s;
+}
+@keyframes animateCloud
+{
+    0%
+    {
+       transform: translateX(-100%) scale(1); 
+    }
+    100%
+    {
+       transform: translateX(400%) scale(1.5); 
+    }
+}
